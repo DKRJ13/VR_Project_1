@@ -64,9 +64,8 @@ dataset
 
 ## 4. Hyperparameters and Experiments
 
- # CNN Model for Face Mask Detection  
 
-##Hyperparameters Used  
+# Hyperparameters Used in Part B
 
 ### **Model Architecture Hyperparameters**  
 | Hyperparameter         | Value              | Description |
