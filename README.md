@@ -67,9 +67,9 @@ dataset
 
  # CNN Model for Face Mask Detection  
 
-## 📊 Hyperparameters Used  
+##Hyperparameters Used  
 
-### **1️⃣ Model Architecture Hyperparameters**  
+### **Model Architecture Hyperparameters**  
 | Hyperparameter         | Value              | Description |
 |------------------------|-------------------|-------------|
 | **Input Image Size**   | (128, 128, 3)     | Each image is resized to **128×128** with **3 channels (RGB)**. |
@@ -84,7 +84,7 @@ dataset
 
 ---
 
-### **2️⃣ Training Hyperparameters**  
+### **Training Hyperparameters**  
 | Hyperparameter  | Value | Description |
 |----------------|-------|-------------|
 | **Optimizer**  | Adam  | Adaptive learning optimization. |
@@ -96,7 +96,7 @@ dataset
 
 ---
 
-### **3️⃣ Data Augmentation & Preprocessing**  
+### **Data Augmentation & Preprocessing**  
 | Hyperparameter  | Value | Description |
 |----------------|--------|-------------|
 | **Rescaling**  | 1/255  | Normalizes pixel values between 0 and 1. |
@@ -105,17 +105,12 @@ dataset
 
 ---
 
-### **4️⃣ Dataset Splitting Hyperparameters**  
+### **Dataset Splitting Hyperparameters**  
 | Hyperparameter  | Value  | Description |
 |----------------|--------|-------------|
 | **Train Ratio** | 80% | Data used for training. |
 | **Validation Ratio** | 10% | Used for tuning hyperparameters. |
 | **Test Ratio** | 10% | Used for final model evaluation. |
-
----
-
-### 📂 **Dataset Structure**
-
 
 ---
 
