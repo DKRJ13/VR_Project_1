@@ -138,7 +138,105 @@ For each image here we need to make a feature vector. We choose 5 features: colo
 
 ### Part b
 
-[TO BE ADDED BY DAKSH AND ADITYA]
+# Face Mask Detection using CNN
+
+## Project Overview
+This project implements a **binary classification** task using a **Convolutional Neural Network (CNN)** to detect whether a person is wearing a face mask or not. The dataset is split into training, validation, and testing sets. Various **hyperparameters** such as batch size, learning rate, optimizer, and activation functions were experimented with to achieve the best performance. The CNN model's performance is then compared with traditional **Machine Learning (ML) classifiers**.
+
+---
+
+## Dataset Preparation
+### 1. Dataset Splitting
+- The dataset consists of two classes: `with_mask` and `without_mask`.
+- Images are split into **80% training, 10% validation, and 10% testing**.
+- A script ensures images are valid and copied to their respective directories.
+
+### 2. Dataset Structure
+```
+dataset_split/
+├── train/
+│   ├── 0/  # Masked Images
+│   ├── 1/  # Unmasked Images
+├── val/
+│   ├── 0/  # Masked Images for Validation
+│   ├── 1/  # Unmasked Images for Validation
+├── test/
+│   ├── 0/  # Masked Images for Testing
+│   ├── 1/  # Unmasked Images for Testing
+```
+
+---
+
+## Model Architecture
+A **CNN model** is designed with the following layers:
+1. **Convolutional Layers**: Extract spatial features using **ReLU activation**.
+2. **MaxPooling Layers**: Reduce spatial dimensions to prevent overfitting.
+3. **Flatten Layer**: Converts feature maps into a single vector.
+4. **Fully Connected (Dense) Layer**: Learns classification features.
+5. **Dropout Layer (0.5)**: Reduces overfitting.
+6. **Output Layer (Sigmoid Activation)**: Outputs a probability score for binary classification.
+
+---
+
+## Training and Hyperparameter Tuning
+- **Batch Size:** 32/64/96/128 (Best: **64**)
+- **Epochs:** 10/15/20 (Best: **15**)
+- **Optimizer:** Adam
+- **Loss Function:** Binary Cross-Entropy
+- **Activation Function (Final Layer):** Sigmoid (compared with Softmax, Sigmoid performed better)
+- **Data Augmentation:** Experimented but found that training without augmentation gave better results.
+
+### Training Process
+- **Initial Weights Saved & Loaded:** Ensuring consistent training across different runs.
+- **Validation Set Used:** To monitor generalization.
+- **Training Accuracy & Loss Plotted.**
+
+---
+
+## Results & Performance
+- **Test Accuracy:** **96.33%**
+- **Train Accuracy:** ~95.63%
+- **Final Model Saved As:** `face_mask_cnn1.keras`
+
+### Model Performance Graphs
+The output graphs show:
+- **Model Accuracy:** Training accuracy vs. validation accuracy
+- **Model Loss:** Training loss vs. validation loss
+
+---
+
+## Evaluation
+- **The CNN model significantly outperformed ML classifiers.**
+- **Test accuracy (96.33%)** indicates strong generalization.
+- **Further improvements:** More hyperparameter tuning, deeper architectures, and additional data preprocessing.
+
+---
+
+## How to Run the Code
+```sh
+# 1. Clone the repository and navigate to the project directory.
+git clone <repository_url>
+cd <repository_name>
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the dataset preparation script
+python dataset_preparation.py
+
+# 4. Train the CNN model
+python train_model.py
+
+# 5. Evaluate the model on test data
+python evaluate.py
+```
+
+---
+
+## Conclusion
+This project demonstrates the effectiveness of **CNNs for binary classification** in a face mask detection scenario. By tuning hyperparameters and optimizing model architecture, we achieved a high accuracy of **96.33%**, outperforming traditional ML classifiers.
+
+
 
 ### Part c
 
