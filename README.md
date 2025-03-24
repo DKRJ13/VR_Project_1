@@ -130,13 +130,13 @@ dataset
 
 ## 6. Observations and Analysis
 
-### Part a
+### PART A
 
 For each image here we need to make a feature vector. We choose 5 features: color features, HoG, Edge features, texture featuresand ORB fetaures. 
 
 ***Since feature vector coresponding to images may be of diffrent lentgh, we resize all image and fix the length of individual sub-feature vectors, so that `np.hstack() `can work without interrupts when all individual sub-feature vectors ar combined into one vector for an image***. Data used is `dataset`. We train an XGBoost model as well as a neural network and as observed, the test accuracy of XGBoost is better. This is attributed to the fact that neural networks need a lot of data to learn and here we have 4095 images.
 
-### Part b
+### PART B
 
 
 ### Project Overview
@@ -211,25 +211,6 @@ The output graphs show:
 
 ---
 
-### How to Run the Code
-```sh
-# 1. Clone the repository and navigate to the project directory.
-git clone https://github.com/JConquers/VR_Project_1
-cd VR_PROJECT_1
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Run the dataset preparation script
-python dataset_preparation.py
-
-# 4. Train the CNN model
-python train_model.py
-
-# 5. Evaluate the model on test data
-python evaluate.py
-```
-
 ---
 
 ## Conclusion
@@ -237,7 +218,7 @@ This project demonstrates the effectiveness of **CNNs for binary classification*
 
 
 
-### Part c
+### PART C
 
 2 techniques used: K-means clustering based segmentation and Region-growing.
 
