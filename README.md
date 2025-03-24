@@ -121,7 +121,7 @@ dataset
 |--------|------------|----|-----------|
 | XGBoost (part a) | 94.15% (80-20 train-test split) | - | - |
 | Neural Network (part a)| 91.25% (80-20 train-test split) | - | - |
-| CNN | [TO BE ADDED BY DAKSH AND ADITYA] |
+| CNN (part b) | 96.33% (80-10-10 train-validation-test split)| - | - |
 | Region-growing (part c) | - | 0.3559 (mean) | 0.4798 (mean) |
 | K-mean clustering  (part c) | Explained in section 6|
 | U-Net Segmentation | [TO BE ADDED BY DAKSH AND ADITYA] |
