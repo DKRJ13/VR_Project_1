@@ -65,7 +65,7 @@ dataset
 ## 4. Hyperparameters and Experiments
 
 
-# Hyperparameters Used in Part B
+### Hyperparameters Used in Part B
 
 ### **Model Architecture Hyperparameters**  
 | Hyperparameter         | Value              | Description |
