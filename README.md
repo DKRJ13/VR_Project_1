@@ -146,7 +146,7 @@ This project implements a **binary classification** task using a **Convolutional
 
 ### Dataset Preparation
 #### 1. Dataset Splitting
-- The dataset consists of two classes: `with_mask` and `without_mask`.
+- The original dataset consists of two classes: `with_mask` and `without_mask`. A new dataset dataset_split is created consisting of the subdirectories train,test and val. These 3 further have 2 subdirectories 0 and 1.
 - Images are split into **80% training, 10% validation, and 10% testing**.
 - A script ensures images are valid and copied to their respective directories.
 
