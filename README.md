@@ -65,6 +65,58 @@ dataset
 ## 4. Hyperparameters and Experiments
  [TO BE ADDED BY DAKSH AND ADITYA]
 
+ # CNN Model for Face Mask Detection  
+
+## 📊 Hyperparameters Used  
+
+### **1️⃣ Model Architecture Hyperparameters**  
+| Hyperparameter         | Value              | Description |
+|------------------------|-------------------|-------------|
+| **Input Image Size**   | (128, 128, 3)     | Each image is resized to **128×128** with **3 channels (RGB)**. |
+| **Number of Conv Layers** | 3 | Extracts hierarchical features. |
+| **Filter Sizes**       | (3,3) | Kernel size used in Conv layers. |
+| **Number of Filters per Layer** | 32 → 64 → 128 | Increasing filters to capture more complex features. |
+| **Pooling Layer**      | MaxPooling2D (2×2) | Reduces spatial dimensions. |
+| **Activation Function** | ReLU | Introduces non-linearity. |
+| **Fully Connected Layer** | Dense(128, activation='relu') | Fully connected hidden layer. |
+| **Dropout Rate**       | 0.5 | Prevents overfitting. |
+| **Output Layer**       | Dense(1, activation='sigmoid') | Binary classification (mask/no-mask). |
+
+---
+
+### **2️⃣ Training Hyperparameters**  
+| Hyperparameter  | Value | Description |
+|----------------|-------|-------------|
+| **Optimizer**  | Adam  | Adaptive learning optimization. |
+| **Loss Function** | Binary Crossentropy | Suitable for binary classification. |
+| **Metrics**    | Accuracy | Evaluates performance. |
+| **Epochs**     | 15 (tested 10/15/20) | Number of times model sees the dataset. |
+| **Batch Size** | 64 (tested 32/64/96/128) | Number of images per batch. |
+| **Weight Initialization** | Pre-saved Weights | Ensures consistent training across runs. |
+
+---
+
+### **3️⃣ Data Augmentation & Preprocessing**  
+| Hyperparameter  | Value | Description |
+|----------------|--------|-------------|
+| **Rescaling**  | 1/255  | Normalizes pixel values between 0 and 1. |
+| **Augmentation** | None (Default) | The model performed best without augmentation. |
+| **Alternative Augmentation Options** | Rotation (20°), Shift (0.2), Zoom (0.2), Shear (0.2), Flip | Commented out but available for use. |
+
+---
+
+### **4️⃣ Dataset Splitting Hyperparameters**  
+| Hyperparameter  | Value  | Description |
+|----------------|--------|-------------|
+| **Train Ratio** | 80% | Data used for training. |
+| **Validation Ratio** | 10% | Used for tuning hyperparameters. |
+| **Test Ratio** | 10% | Used for final model evaluation. |
+
+---
+
+### 📂 **Dataset Structure**
+
+
 ---
 
 ## 5. Results
