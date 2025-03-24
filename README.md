@@ -67,7 +67,7 @@ dataset
 
 ### Hyperparameters Used in Part B
 
-### **Model Architecture Hyperparameters**  
+#### **Model Architecture Hyperparameters**  
 | Hyperparameter         | Value              | Description |
 |------------------------|-------------------|-------------|
 | **Input Image Size**   | (128, 128, 3)     | Each image is resized to **128×128** with **3 channels (RGB)**. |
@@ -82,7 +82,7 @@ dataset
 
 ---
 
-### **Training Hyperparameters**  
+#### **Training Hyperparameters**  
 | Hyperparameter  | Value | Description |
 |----------------|-------|-------------|
 | **Optimizer**  | Adam  | Adaptive learning optimization. |
@@ -94,7 +94,7 @@ dataset
 
 ---
 
-### **Data Augmentation & Preprocessing**  
+#### **Data Augmentation & Preprocessing**  
 | Hyperparameter  | Value | Description |
 |----------------|--------|-------------|
 | **Rescaling**  | 1/255  | Normalizes pixel values between 0 and 1. |
@@ -103,7 +103,7 @@ dataset
 
 ---
 
-### **Dataset Splitting Hyperparameters**  
+#### **Dataset Splitting Hyperparameters**  
 | Hyperparameter  | Value  | Description |
 |----------------|--------|-------------|
 | **Train Ratio** | 80% | Data used for training. |
