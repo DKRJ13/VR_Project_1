@@ -63,7 +63,6 @@ dataset
 ---
 
 ## 4. Hyperparameters and Experiments
- [TO BE ADDED BY DAKSH AND ADITYA]
 
  # CNN Model for Face Mask Detection  
 
